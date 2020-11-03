@@ -29,8 +29,7 @@ resource "aws_security_group" "ec2_security_group" {
   tags = local.tags
 }
 
-
-resource "aws_security_group_rule" "ec2_all_egress" {
+resource "aws_security_group_rule" "ec2_all_ingress" {
   type      = "ingress"
   from_port = "0"
   to_port   = "65535"
