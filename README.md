@@ -1,12 +1,29 @@
 # Demo pre-commit with doc and sec
 
-## Table of Content
-
-<!-- TOC -->
-
 ## Layer terraform documentation
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Requirements
+
+| Name | Version |
+|------|---------|
+| terraform | >= 0.12, < 0.13 |
+| aws | >= 2.0 |
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| aws | >= 2.0 |
+
+## Inputs
+
+No input.
+
+## Outputs
+
+No output.
+
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Pre-commit

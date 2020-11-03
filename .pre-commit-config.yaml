@@ -21,8 +21,3 @@ repos:
     rev: v0.1.3
     hooks:
       - id: terraform-fmt
-
-  - repo: https://github.com/frnmst/md-toc
-    rev: 7.0.3
-    hooks:
-      - id: md-toc
