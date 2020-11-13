@@ -3,6 +3,32 @@
 ## Layer terraform documentation
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Requirements
+
+| Name | Version |
+|------|---------|
+| terraform | >= 0.12, < 0.13 |
+| aws | >= 2.0 |
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| aws | >= 2.0 |
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| common\_tags | The layer common tags to associate to each resources deployed. | <pre>object({<br>    Application_Code = string<br>    Owner            = string<br>    Cost_Center      = string<br>    Environment      = string<br>    Name             = string<br>    Description      = string<br>  })</pre> | n/a | yes |
+
+## Outputs
+
+| Name | Description |
+|------|-------------|
+| ec2\_instance\_arn | EC2 instance ARN |
+| ec2\_instance\_id | EC2 instance id |
+
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Pre-commit
