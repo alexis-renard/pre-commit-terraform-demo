@@ -1,0 +1,11 @@
+{
+   "demo":{
+      "title":"pre-commit",
+      "GlossDiv":{
+         "title":"S",
+         "content":{
+            "message"=False
+         }
+      }
+   }
+}
