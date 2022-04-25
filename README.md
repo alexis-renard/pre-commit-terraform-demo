@@ -4,11 +4,11 @@ A lightweight demo repo to present pre-commit to some collegues, with a specific
 
 3 branches are available for different scenarios 
 * `0-pre-commit`
-    * Premières manipulations et contrôles fait sur un script python et un fichier static (json)
+    * First manipulations and checks done on a static file (json) and basic python script
 * `1-pre-commit-terraform`
-    * Notre premier repo terraform basique ! Le code est vérifié et formaté automatiquement grâce à de premiers hooks.
+    * Our first basic terraform repo ! The code is verified and automatically formated thanks to our first pre-commit hooks.
 * `2-pre-commit-terraform-with-docs-and-sec`
-    * Il est temps d'ajouter de la sécu, et de la génération de doc automatique.
+    * Finally adding some security checks and automatic doc generation.
 
 ## pre-commit install 
 ### Ubuntu 20.04
