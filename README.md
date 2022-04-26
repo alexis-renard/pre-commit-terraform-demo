@@ -20,4 +20,3 @@ The compliant one includes a tfsec:ignore)
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-
