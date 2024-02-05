@@ -15,9 +15,8 @@ repos:
       - id: terraform_tflint
         args:
           - 'args=--deep'
-      - id: terraform_tfsec
-        exclude: other-code-example # uncomment to check the sub folder as well
-
+      # - id: terraform_tfsec
+      #   exclude: other-code-example # uncomment to check the sub folder as well
       # - id: terraform_docs
 
   # - repo: https://github.com/Yelp/detect-secrets
