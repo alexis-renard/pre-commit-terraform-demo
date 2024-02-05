@@ -14,7 +14,9 @@
 
 ## Terraform module overview
 This module contains a compliant and a non compliant s3 bucket resources.
-The compliant one includes a tfsec:ignore)
+The compliant one includes a `tfsec:ignore` comment.
+
+You want more ? An example is also available for deploying an EC2 instance with some security groups under the `other-code-examples/` folder. Uncomment the exclude from the `.pre-commit-config.yaml` to check how secure the given code is.
 
 ## Layer terraform documentation
 

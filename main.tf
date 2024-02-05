@@ -8,6 +8,9 @@
 
 resource "aws_s3_bucket" "non_compliant" {
   bucket = "${var.bucket_base_name}-non-compliant"
+  tags = {
+    secret = "AASKJNDSQKJ531QSD12021"
+  }
 }
 
 #===================================================
