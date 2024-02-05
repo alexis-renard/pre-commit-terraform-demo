@@ -20,15 +20,11 @@ data "aws_ami" "ubuntu" {
 
 resource "aws_instance" "web" {
   ami           = data.aws_ami.ubuntu.id
-  instance_type = "t3.micro"
-
-  tags = local.tags
+  instance_type = "t3.macro"
 }
 
 resource "aws_security_group" "ec2_security_group" {
   name = "DEMO INSTANCE security group"
-
-  tags = local.tags
 }
 
 #tfsec:ignore:AWS018
