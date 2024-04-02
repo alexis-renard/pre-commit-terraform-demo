@@ -2,21 +2,27 @@
 # See https://pre-commit.com/hooks.html for more hooks
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.2.0
+    rev: v4.5.0
     hooks:
       - id: check-yaml
       - id: trailing-whitespace
       - id: end-of-file-fixer
 
   - repo: https://github.com/antonbabenko/pre-commit-terraform
-    rev: v1.69.0
+    rev: v1.88.4
     hooks:
       - id: terraform_fmt
       - id: terraform_tflint
         args:
           - 'args=--deep'
-      # - id: terraform_tfsec
-      #   exclude: other-code-example # uncomment to check the sub folder as well
+      # - id: terraform_tfsec # removed because of its incompatibility with tf > 1.5. Now using trivy instead.
+      # - id: terraform_trivy
+      #   args:
+      #     # Note : all of this didn't manage to skip the other-code-example folder. The issue https://github.com/antonbabenko/pre-commit-terraform/issues/617 might still be relevant and should be re-open.
+      #     - --args=--skip-files="**/other-code-examples/**/*"
+      #     - --args=--skip-files="**/other-code-examples/**/*"
+      #     - --args=--skip-dirs="**/other-code-examples"
+      #     - --args=--skip-dirs="**/ec2"
       # - id: terraform_docs
 
   # - repo: https://github.com/Yelp/detect-secrets

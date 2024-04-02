@@ -23,18 +23,25 @@ resource "aws_kms_key" "compliant" {
   enable_key_rotation     = true
 }
 
-#tfsec:ignore:aws-s3-enable-bucket-logging
+#trivy:ignore:avd-aws-0089
 resource "aws_s3_bucket" "compliant" {
   bucket = "${var.bucket_base_name}-compliant"
-  versioning {
-    enabled = true
+}
+
+resource "aws_s3_bucket_versioning" "versioning_example" {
+  bucket = aws_s3_bucket.compliant.id
+  versioning_configuration {
+    status = "Enabled"
   }
-  server_side_encryption_configuration {
-    rule {
-      apply_server_side_encryption_by_default {
-        kms_master_key_id = aws_kms_key.compliant.arn
-        sse_algorithm     = "aws:kms"
-      }
+}
+
+resource "aws_s3_bucket_server_side_encryption_configuration" "example" {
+  bucket = aws_s3_bucket.compliant.id
+
+  rule {
+    apply_server_side_encryption_by_default {
+      kms_master_key_id = aws_kms_key.compliant.arn
+      sse_algorithm     = "aws:kms"
     }
   }
 }

@@ -6,7 +6,7 @@
 
 ## Demo workflow
 * Show the pre-commit run working : `pre-commit run --all`
-* Add the `tfsec` hook and run it again
+* Add the `trivy` hook and run it again
     * Fix or comment the non compliant bucket
 * Add the `detect-secrets` hook and run it again
     * Add a potential secret as variable default
