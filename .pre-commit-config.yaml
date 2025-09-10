@@ -2,11 +2,11 @@
 # See https://pre-commit.com/hooks.html for more hooks
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.2.0
+    rev: v6.0.0
     hooks:
       - id: check-json
       - id: end-of-file-fixer
   - repo: https://github.com/pycqa/flake8
-    rev: 3.9.2
+    rev: 7.3.0
     hooks:
     - id: flake8
