@@ -6,7 +6,11 @@ repos:
     hooks:
       - id: check-json
       - id: end-of-file-fixer
-  - repo: https://github.com/pycqa/flake8
-    rev: 7.3.0
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    # Ruff version.
+    rev: v0.12.12
     hooks:
-    - id: flake8
+      # Run the linter.
+      - id: ruff-check
+      # Run the formatter.
+      - id: ruff-format
